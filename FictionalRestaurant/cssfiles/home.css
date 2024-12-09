@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 60px 60px auto 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: 
+    "header header header header"
+    "bar bar bar bar"
+    "main main main main"
+    "footer footer footer footer";
+}
+.header {
+    background-color: black;
+    grid-area: header;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bar {
+    background-color: whitesmoke;
+    grid-area: bar;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: white;
+    grid-area: main;
+
+    display: grid;
+    grid-template-rows: 400px 1fr 1fr 400px 1fr 400px 1fr 400px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "backgroundy backgroundy  backgroundbehind backgroundbehind"
+    "backgroundy backgroundy  backgroundbehind backgroundbehind"
+    ". . . ."
+    "pod1background pod1background pod1 pod1"
+    ". . . ."
+    "pod2background pod2background pod2 pod2"
+    ". . . ."
+    "pod3background pod3background pod3 pod3";
+    gap: 30px 0px;
+}
+.footer {
+    background-color: lightgray;
+    grid-area: footer;
+
+}
+.background {
+    background-image: url(../imgs/dishbackground.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: backgroundy;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s ease-in;
+}
+.background:hover {
+    background-size: 120%;
+}
+.background h2 {
+    color: wheat;
+    box-shadow: 1px 1px 5px 1px black;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    font-size: 60px;
+
+
+}
+.behindbackground {
+    background-color: #192734;
+    grid-area: backgroundbehind;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.behindbackground h2 {
+    padding: 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.behindbackground button {
+    padding: 10px 25px;
+    background-color: rgb(0, 188, 0);
+    border: 2px solid rgb(0, 188, 0);
+    border-radius: 12px;
+    box-shadow: 1px 1px 10px 1px black;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.behindbackground button:hover {
+    transform: scale(1.04);
+    background-color: rgb(0, 214, 0);
+    border: 2px solid rgb(0, 214, 0);
+
+}
+.behindbackground button a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+}
+.header ul {
+    display: flex;
+    align-items: center;
+}
+.header ul li {
+    padding: 20px;
+}
+.header ul li a {
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.header ul li a:hover {
+    transform: scale(1.1);
+}
+.logo {
+    padding-left: 20px;
+}
+.logo a {
+    color: whitesmoke;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+}
+.contact {
+    padding-left: 20px;
+}
+.contact button {
+    padding: 5px 15px;
+    background-color: wheat;
+    border: 2px solid wheat;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.contact button a {
+    color: black;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-decoration: none;
+}
+.bar a {
+    padding: 0 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #333;
+    transition: 0.2s ease-in-out;
+}
+.bar a:hover {
+    color: wheat;
+}
+.pod1 {
+    background-color: #192734;
+    grid-area: pod1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.pod2 {
+    background-color: #192734;
+    grid-area: pod2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.pod3 {
+    background-color: #192734;
+    grid-area: pod3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.pod1background {
+    background-image: url(../imgs/pizza.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: pod1background;
+}
+.pod2background {
+    background-image: url(../imgs/pasta.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: pod2background;
+}
+.pod3background {
+    background-image: url(../imgs/rice.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: pod3background;
+}
+.pod1 h2 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+.pod1 p {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 20px 0px;
+}
+.pod2 h2 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+.pod2 p {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 20px 0px;
+}
+
+.pod3 h2 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+.pod3 p {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 20px 0px;
+}
+
+.pod1 button {
+    padding: 5px 200px;
+    background-color: wheat;
+    border: 2px solid wheat;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.pod1 button:hover {
+    background-color: rgb(242, 212, 156);
+    border: 2px solid rgb(242, 212, 156);
+}
+.pod1 button a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 14px;
+}
+.pod2 button {
+    padding: 5px 200px;
+    background-color: wheat;
+    border: 2px solid wheat;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.pod2 button:hover {
+    background-color: rgb(242, 212, 156);
+    border: 2px solid rgb(242, 212, 156);
+}
+.pod2 button a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 14px;
+}
+.pod3 button {
+    padding: 5px 200px;
+    background-color: wheat;
+    border: 2px solid wheat;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.pod3 button:hover {
+    background-color: rgb(242, 212, 156);
+    border: 2px solid rgb(242, 212, 156);
+}
+.pod3 button a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 14px;
+}
+.subfooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.subfooter ul {
+    display: flex;
+    list-style: none;
+
+}
+.subfooter ul li {
+    padding: 20px;
+}
+.subfooter ul li a {
+    color: #192734;
+ 
+}
+.subfooter {
+    border-bottom: 2px solid black;
+}
+@media (max-width:950px) {
+    .header {
+        flex-direction: column;
+    }
+    body {
+        grid-template-rows: 150px 60px auto 100px;
+    }
+    .pod1background {
+        background-size: cover;
+    }
+    .pod2background {
+        background-size: cover;
+    }
+    .pod3background {
+        background-size: cover;
+    }
+    .background {
+        background-size: cover;
+    }
+    .background h2 {
+        font-size: 10px;
+    }
+    .pod1 p {
+        font-size: 12px;
+    }
+    .pod2 p {
+        font-size: 12px;
+    }
+    .pod3 p {
+        font-size: 12px;
+    }
+    .pod1 button {
+        padding: 5px 80px;
+    }
+    .pod2 button {
+        padding: 5px 80px;
+    }
+    .pod3 button {
+        padding: 5px 80px;
+    }
+}
+.bar i {
+    color: #192734;
+}

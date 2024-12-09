@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 60px auto 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+
+    
+}
+.header {
+    grid-area: header;
+    background-color: black;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main {
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: 40% 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "yellowbg whitebg whitebg"
+    "yellowbg form whitebg3"
+    "yellowbg whitebg2 whitebg2 "
+
+
+}
+.footer {
+    grid-area: footer;
+    background-color: black;
+}
+.header ul {
+    display: flex;
+    align-items: center;
+}
+.header ul li {
+    padding: 20px;
+}
+.header ul li a {
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.header ul li a:hover {
+    transform: scale(1.1);
+}
+.logo {
+    padding-left: 20px;
+}
+.logo a {
+    color: whitesmoke;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+}
+.contact {
+    padding-left: 20px;
+}
+.contact button {
+    padding: 5px 15px;
+    background-color: wheat;
+    border: 2px solid wheat;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.contact button a {
+    color: black;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-decoration: none;
+}
+.yellowbg {
+    grid-area: yellowbg;
+    background-color: orange;
+
+}
+.whitebg {
+    grid-area: whitebg;
+    background-color: #fff;
+}
+.form {
+    grid-area: form;
+    background-color: #222;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+.whitebg2 {
+    grid-area: whitebg2;
+    background-color: #fff;
+}
+.whitebg3 {
+    grid-area: whitebg3;
+    background-color: #fff;
+}
+.form h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+}
+.form p {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    border-bottom: 1px solid rgb(203, 203, 80);
+    padding: 10px;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer p {
+    color: white;
+}
+.form i {
+    color: orange;
+    padding: 5px;
+}

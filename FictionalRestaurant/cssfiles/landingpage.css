@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: 60px auto;
+    grid-template-areas: 
+    "side header"
+    "side main";
+}
+
+.sectionheader {
+    background-color: #090806;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sectionsidebar {
+    background-image: url(../imgs/restobackground.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: side;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . ."
+    "text text text"
+    ". . ."
+    ". . .";
+}
+.sectionmain {
+    background-color: #13100d;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    ". . ."
+    ". form ."
+    ". . .";
+    
+}
+.form {
+    background-color: #13100d;
+    grid-area: form;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form {
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+form input {
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    background-color: transparent;
+    font-size: 30px;
+    color: wheat;
+}
+form button {
+    background-color: brown;
+    border: 2px solid black;
+    padding: 10px 50px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+form button:hover {
+    transform: scale(1.05);
+}
+form button a {
+    color: whitesmoke;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+}
+.sectionheader ul {
+    display: flex;
+    align-items: center;
+}
+.sectionheader ul li {
+    padding: 20px;
+}
+.sectionheader ul li a {
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.sectionheader ul li a:hover {
+    transform: scale(1.1);
+}
+.logo {
+    padding-left: 20px;
+}
+.logo a {
+    color: whitesmoke;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+}
+.contact {
+    padding-left: 20px;
+}
+.contact button {
+    padding: 5px 15px;
+    background-color: wheat;
+    border: 2px solid wheat;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.contact button a {
+    color: black;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-decoration: none;
+}
+.text {
+    grid-area: text;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.text h3 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px;
+}
+.text button {
+    padding: 5px 20px;
+    background-color: brown;
+    border: 2px solid brown;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out ;
+}
+.text button:hover {
+    background-color: wheat;
+    border: 2px solid wheat;
+}
+.text button a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+}
+@media (max-width:750px) {
+    .sectionheader {
+        flex-direction: column;
+        
+    }
+    body {
+        grid-template-rows: 150px 1fr;
+        grid-template-columns: 40% 1fr;
+    }
+    .sectionmain form {
+        font-size: 25px;
+    }
+    .sectionmain form input {
+        font-size: 25px;
+    }
+}
